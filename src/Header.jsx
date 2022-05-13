@@ -56,7 +56,10 @@ const Header = () => {
     <HeaderContainer>
       {/* Left Header */}
       <HeaderLeft>
-        <img src="https://cdn.discordapp.com/attachments/922772649816498217/974470021654909008/unknown.png" alt="linkedin icons" />
+        <img
+          src="https://cdn.discordapp.com/attachments/922772649816498217/974470021654909008/unknown.png"
+          alt="linkedin icons"
+        />
         <div className="header__search">
           <SearchIcon />
           <input type="text" />
@@ -70,7 +73,10 @@ const Header = () => {
         <HeaderOptions title="Jobs" Icon={BusinessCenterIcon} />
         <HeaderOptions title="Messaging" Icon={ChatIcon} />
         <HeaderOptions title="Notifications" Icon={NotificationsIcon} />
-        <HeaderOptions avatar="https://cdn.discordapp.com/attachments/922772649816498217/974488709598674974/Sniper_mask_icon.jpg" title="me" />
+        <HeaderOptions
+          avatar="https://cdn.discordapp.com/attachments/922772649816498217/974488709598674974/Sniper_mask_icon.jpg"
+          title="me"
+        />
       </HeaderRight>
     </HeaderContainer>
   );
