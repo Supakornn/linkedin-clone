@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderOptions from "./HeaderOptions";
+import HeaderOptions from "../components/HeaderOptions";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
