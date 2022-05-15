@@ -26,6 +26,12 @@ const SidebarTop = styled.div`
   .sidebar__avatar {
     margin-bottom: 10px;
   }
+
+  > img {
+    margin-bottom: -20px;
+    width: 100%;
+    height: 60px;
+  }
 `;
 
 const SidebarStats = styled.div``;
@@ -34,7 +40,10 @@ const Sidebar = () => {
   return (
     <SidebarContainer>
       <SidebarTop>
-        <img src="" alt="" />
+        <img
+          src="https://images.unsplash.com/photo-1650618319276-f2acb4454e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          alt="banner"
+        />
         <Avatar className="sidebar__avatar" />
         <h2>Supakorn Ieamgomol</h2>
         <h4>supakorn.i@proton.me</h4>
