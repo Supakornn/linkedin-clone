@@ -13,6 +13,10 @@ const SidebarContainer = styled.div`
 `;
 
 const SidebarTop = styled.div`
+  .sidebar__avatar {
+    margin-bottom: 10px;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,10 +26,6 @@ const SidebarTop = styled.div`
   border-top-right-radius: 10px;
   background-color: white;
   padding-bottom: 10px;
-
-  .sidebar__avatar {
-    margin-bottom: 10px;
-  }
 
   > img {
     margin-bottom: -20px;
@@ -47,18 +47,18 @@ const SidebarTop = styled.div`
 `;
 
 const SidebarStats = styled.div`
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid LightGray;
-  background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-
   .sidebar__stat {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
   }
+
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   .sidebar__stat > p {
     color: gray;
@@ -73,22 +73,25 @@ const SidebarStats = styled.div`
 `;
 
 const SidebarBottom = styled.div`
-  text-align: left;
+  /* text-align: left;
   padding: 10px;
   border: 1px solid LightGray;
   background-color: white;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 10px; */
 `;
 
 const Sidebar = () => {
   return (
     <SidebarContainer>
       <SidebarTop>
-        <img src="https://wallpaperaccess.com/full/2637581.jpg" alt="banner" />
+        <img
+          src="https://images.unsplash.com/photo-1652489997208-87ffeffc072b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="banner"
+        />
         <Avatar className="sidebar__avatar" />
         <h2>Supakorn Ieamgomol</h2>
-        <h4>supakorn.i@proton.me</h4>
+        <h4>supakorn0728@gmail.com</h4>
       </SidebarTop>
       <SidebarStats>
         <div className="sidebar__stat">
