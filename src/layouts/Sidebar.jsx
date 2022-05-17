@@ -35,18 +35,57 @@ const SidebarTop = styled.div`
     border-top-right-radius: 10px;
     object-fit: cover;
   }
+
+  > h4 {
+    color: gray;
+    font-size: 12px;
+  }
+
+  > h2 {
+    font-size: 18px;
+  }
 `;
 
-const SidebarStats = styled.div``;
+const SidebarStats = styled.div`
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid LightGray;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  .sidebar__stat {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sidebar__stat > p {
+    color: gray;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .sidebar__statNumber {
+    font-weight: bold;
+    color: #0a66c2 !important;
+  }
+`;
+
+const SidebarBottom = styled.div`
+  text-align: left;
+  padding: 10px;
+  border: 1px solid LightGray;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+`;
 
 const Sidebar = () => {
   return (
     <SidebarContainer>
       <SidebarTop>
-        <img
-          src="https://images.unsplash.com/photo-1650618319276-f2acb4454e9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-          alt="banner"
-        />
+        <img src="https://wallpaperaccess.com/full/2637581.jpg" alt="banner" />
         <Avatar className="sidebar__avatar" />
         <h2>Supakorn Ieamgomol</h2>
         <h4>supakorn.i@proton.me</h4>
@@ -61,9 +100,9 @@ const Sidebar = () => {
           <p className="sidebar__statNumber">2,551</p>
         </div>
       </SidebarStats>
-      <div className="sidebar__bottom">
+      <SidebarBottom>
         <p>Recent</p>
-      </div>
+      </SidebarBottom>
     </SidebarContainer>
   );
 };
