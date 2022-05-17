@@ -31,6 +31,9 @@ const SidebarTop = styled.div`
     margin-bottom: -20px;
     width: 100%;
     height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
   }
 `;
 
