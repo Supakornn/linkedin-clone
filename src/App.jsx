@@ -13,6 +13,16 @@ const AppContainer = styled.div`
 
 const BodyContainer = styled.div`
   display: flex;
+  width: 100%;
+`;
+const Section = styled.div`
+  flex: 0.6;
+  background-color: red;
+`;
+
+const Sec = styled.div`
+  flex: 0.2;
+  background-color: green;
 `;
 
 function App() {
@@ -23,6 +33,8 @@ function App() {
       {/* Body */}
       <BodyContainer>
         <Sidebar />
+        <Section />
+        <Sec />
       </BodyContainer>
     </AppContainer>
   );
