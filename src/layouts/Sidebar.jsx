@@ -73,12 +73,12 @@ const SidebarStats = styled.div`
 `;
 
 const SidebarBottom = styled.div`
-  /* text-align: left;
+  text-align: left;
   padding: 10px;
   border: 1px solid LightGray;
   background-color: white;
   border-radius: 10px;
-  margin-top: 10px; */
+  margin-top: 10px;
 `;
 
 const Sidebar = () => {
