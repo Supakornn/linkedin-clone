@@ -79,9 +79,43 @@ const SidebarBottom = styled.div`
   background-color: white;
   border-radius: 10px;
   margin-top: 10px;
+
+  > p {
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+`;
+
+const SidebarRecntItems = styled.div`
+  display: flex;
+  font-size: 13px;
+  color: gray;
+  font-weight: bolder;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+
+  :hover {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+  }
+
+  .sidebar__hash {
+    margin-left: 10px;
+    margin-right: 5px;
+  }
 `;
 
 const Sidebar = () => {
+  const recentItem = (topic) => (
+    <SidebarRecntItems>
+      <div className="sidebar__hash">#</div>
+      <p>{topic}</p>
+    </SidebarRecntItems>
+  );
+
   return (
     <SidebarContainer>
       <SidebarTop>
@@ -105,6 +139,10 @@ const Sidebar = () => {
       </SidebarStats>
       <SidebarBottom>
         <p>Recent</p>
+        {recentItem("React")}
+        {recentItem("Vue")}
+        {recentItem("Angular")}
+        {recentItem("Go")}
       </SidebarBottom>
     </SidebarContainer>
   );
