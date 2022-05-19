@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CreateIcon from "@mui/icons-material/Create";
 import InputOptions from "../components/InputOptions";
+import ImageIcon from "@mui/icons-material/Image";
 
 const FeedContainer = styled.div`
   flex: 0.6;
@@ -42,6 +43,8 @@ const InputContainer = styled.div`
   }
 `;
 
+const InputOptionsContainer = styled.div``;
+
 const Feed = () => {
   return (
     <FeedContainer>
@@ -53,6 +56,9 @@ const Feed = () => {
             <button type="submit">Send</button>
           </form>
         </div>
+        <InputOptionsContainer>
+          <InputOptions Icon={ImageIcon} title="Photo" />
+        </InputOptionsContainer>
       </InputContainer>
     </FeedContainer>
   );

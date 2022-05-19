@@ -7,7 +7,7 @@ const InputOptions = ({ Icon, title, color }) => {
   return (
     <InputOption>
       <Icon style={{ color: color }} />
-      <h4>Title</h4>
+      <h4>{title}</h4>
     </InputOption>
   );
 };
