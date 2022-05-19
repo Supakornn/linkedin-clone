@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const InputOption = syled.div``;
+const InputOption = styled.div``;
 
 const InputOptions = ({ Icon, title, color }) => {
   return (
