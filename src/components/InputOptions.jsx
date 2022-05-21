@@ -10,8 +10,12 @@ const InputOption = styled.div`
   cursor: pointer;
 
   :hover {
-    background-color: LightGray;
+    background-color: whitesmoke;
     border-radius: 10px;
+  }
+
+  > h4 {
+    margin-left: 5px;
   }
 `;
 
