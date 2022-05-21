@@ -6,6 +6,7 @@ import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
+import Post from "../components/Post";
 
 const FeedContainer = styled.div`
   flex: 0.6;
@@ -69,6 +70,8 @@ const Feed = () => {
           <InputOptions Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
         </InputOptionsContainer>
       </InputContainer>
+
+      <Post />
     </FeedContainer>
   );
 };
