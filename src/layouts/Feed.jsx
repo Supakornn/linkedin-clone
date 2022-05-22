@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import CreateIcon from "@mui/icons-material/Create";
 import BodyButtons from "../components/BodyButtons";
@@ -7,6 +7,7 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
 import Post from "../components/Post";
+import { db } from "../firebase";
 
 const FeedContainer = styled.div`
   flex: 0.6;
@@ -53,6 +54,23 @@ const ButtonContainer = styled.div`
 `;
 
 const Feed = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    db.collection("posts").onSnapshot((snapshot) => {
+      setPosts(
+        snapshot.docs.map((doc) => ({
+          id: doc.id,
+          data: doc.data()
+        }))
+      );
+    });
+  }, []);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <FeedContainer>
       <InputContainer>
@@ -60,7 +78,9 @@ const Feed = () => {
           <CreateIcon />
           <form>
             <input type="text" />
-            <button type="submit">Send</button>
+            <button onClick={sendPost} type="submit">
+              Send
+            </button>
           </form>
         </div>
         <ButtonContainer>
@@ -70,7 +90,9 @@ const Feed = () => {
           <BodyButtons Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
         </ButtonContainer>
       </InputContainer>
-
+      {posts.map((post) => (
+        <Post />
+      ))}
       <Post />
     </FeedContainer>
   );

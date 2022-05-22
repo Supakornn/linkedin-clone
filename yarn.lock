@@ -5012,7 +5012,7 @@ find-up@^5.0.0:
 
 firebase@^9.8.1:
   version "9.8.1"
-  resolved "https://registry.npmjs.org/firebase/-/firebase-9.8.1.tgz"
+  resolved "https://registry.yarnpkg.com/firebase/-/firebase-9.8.1.tgz#502e186078d69d72ab8d4f1b5befa287e0858276"
   integrity sha512-VyM+3ijzB1Q24b9v6HzVOB0bXNy0a/maOZlmv2P8M29VXfrS/npo6zntNiOEtcjrCoItZIuWFH4oDGiYkPHxbg==
   dependencies:
     "@firebase/analytics" "0.7.9"

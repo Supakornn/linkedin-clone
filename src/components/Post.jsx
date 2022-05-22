@@ -4,6 +4,8 @@ import Avatar from "@mui/material/Avatar";
 import BodyButtons from "../components/BodyButtons";
 import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
 import ChatIcon from "@mui/icons-material/Chat";
+import ShareIcon from "@mui/icons-material/Share";
+import SendIcon from "@mui/icons-material/Send";
 
 // styled components
 const PostContainer = styled.div`
@@ -35,7 +37,10 @@ const PostBody = styled.div`
   overflow-wrap: anywhere;
 `;
 
-const ButtonContainer = styled.div``;
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
 
 const Post = ({ name, description, message, photoUrl }) => {
   return (
@@ -53,8 +58,8 @@ const Post = ({ name, description, message, photoUrl }) => {
       <ButtonContainer>
         <BodyButtons Icon={ThumbUpOffAltIcon} title="Like" color="gray" />
         <BodyButtons Icon={ChatIcon} title="Comment" color="gray" />
-        <BodyButtons Icon={ThumbUpOffAltIcon} title="Share" color="gray" />
-        <BodyButtons Icon={ThumbUpOffAltIcon} title="Send" color="gray" />
+        <BodyButtons Icon={ShareIcon} title="Share" color="gray" />
+        <BodyButtons Icon={SendIcon} title="Send" color="gray" />
       </ButtonContainer>
     </PostContainer>
   );
