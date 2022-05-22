@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CreateIcon from "@mui/icons-material/Create";
-import InputOptions from "../components/InputOptions";
+import BodyButtons from "../components/BodyButtons";
 import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import EventNoteIcon from "@mui/icons-material/EventNote";
@@ -64,10 +64,10 @@ const Feed = () => {
           </form>
         </div>
         <InputOptionsContainer>
-          <InputOptions Icon={ImageIcon} title="Photo" color="#70B5F9" />
-          <InputOptions Icon={SubscriptionsIcon} title="Video" color="#E7A33E" />
-          <InputOptions Icon={EventNoteIcon} title="Event" color="#C0CBCD" />
-          <InputOptions Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
+          <BodyButtons Icon={ImageIcon} title="Photo" color="#70B5F9" />
+          <BodyButtons Icon={SubscriptionsIcon} title="Video" color="#E7A33E" />
+          <BodyButtons Icon={EventNoteIcon} title="Event" color="#C0CBCD" />
+          <BodyButtons Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
         </InputOptionsContainer>
       </InputContainer>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderOptions from "../components/HeaderOptions";
+import HeaderButtons from "../components/HeaderButtons";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
@@ -69,13 +69,13 @@ const Header = () => {
 
       {/* Right Header */}
       <HeaderRight>
-        <HeaderOptions title="Home" Icon={HomeIcon} />
-        <HeaderOptions title="My Network" Icon={SupervisorAccountIcon} />
-        <HeaderOptions title="Jobs" Icon={BusinessCenterIcon} />
-        <HeaderOptions title="Messaging" Icon={ChatIcon} />
-        <HeaderOptions title="Notifications" Icon={NotificationsIcon} />
-        <HeaderOptions
-          avatar="https://cdn.discordapp.com/attachments/922772649816498217/974488709598674974/Sniper_mask_icon.jpg"
+        <HeaderButtons title="Home" Icon={HomeIcon} />
+        <HeaderButtons title="My Network" Icon={SupervisorAccountIcon} />
+        <HeaderButtons title="Jobs" Icon={BusinessCenterIcon} />
+        <HeaderButtons title="Messaging" Icon={ChatIcon} />
+        <HeaderButtons title="Notifications" Icon={NotificationsIcon} />
+        <HeaderButtons
+          avatar="https://i.pinimg.com/736x/47/88/7a/47887aad237a9bbdf081ae36ebe53778.jpg"
           title="me"
         />
       </HeaderRight>

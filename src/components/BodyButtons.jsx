@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const InputOption = styled.div`
+const Button = styled.div`
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -19,13 +19,13 @@ const InputOption = styled.div`
   }
 `;
 
-const InputOptions = ({ Icon, title, color }) => {
+const BodyButtons = ({ Icon, title, color }) => {
   return (
-    <InputOption>
+    <Button>
       <Icon style={{ color: color }} />
       <h4>{title}</h4>
-    </InputOption>
+    </Button>
   );
 };
 
-export default InputOptions;
+export default BodyButtons;
