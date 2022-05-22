@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
+import BodyButtons from "../components/BodyButtons";
+import ThumbUpOffAltIcon from "@mui/icons-material/ThumbUpOffAlt";
+import ChatIcon from "@mui/icons-material/Chat";
 
 // styled components
 const PostContainer = styled.div`
@@ -32,19 +35,27 @@ const PostBody = styled.div`
   overflow-wrap: anywhere;
 `;
 
+const ButtonContainer = styled.div``;
+
 const Post = ({ name, description, message, photoUrl }) => {
   return (
     <PostContainer>
       <PostHeader>
         <Avatar />
         <PostInfo>
-          <h2>Supakorn</h2>
-          <p>Description</p>
+          <h2>{name}</h2>
+          <p>{description}</p>
         </PostInfo>
       </PostHeader>
       <PostBody>
-        <p>Message</p>
+        <p>{message}</p>
       </PostBody>
+      <ButtonContainer>
+        <BodyButtons Icon={ThumbUpOffAltIcon} title="Like" color="gray" />
+        <BodyButtons Icon={ChatIcon} title="Comment" color="gray" />
+        <BodyButtons Icon={ThumbUpOffAltIcon} title="Share" color="gray" />
+        <BodyButtons Icon={ThumbUpOffAltIcon} title="Send" color="gray" />
+      </ButtonContainer>
     </PostContainer>
   );
 };

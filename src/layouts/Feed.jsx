@@ -47,7 +47,7 @@ const InputContainer = styled.div`
   }
 `;
 
-const InputOptionsContainer = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
@@ -63,12 +63,12 @@ const Feed = () => {
             <button type="submit">Send</button>
           </form>
         </div>
-        <InputOptionsContainer>
+        <ButtonContainer>
           <BodyButtons Icon={ImageIcon} title="Photo" color="#70B5F9" />
           <BodyButtons Icon={SubscriptionsIcon} title="Video" color="#E7A33E" />
           <BodyButtons Icon={EventNoteIcon} title="Event" color="#C0CBCD" />
           <BodyButtons Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
-        </InputOptionsContainer>
+        </ButtonContainer>
       </InputContainer>
 
       <Post />
