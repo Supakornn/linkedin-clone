@@ -6,25 +6,17 @@ export const userSlice = createSlice({
     user: null
   },
   reducers: {
-    increment: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1;
+    login: (state, action) => {
+      state.value = action.payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
-    },
-    // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    logout: (state, action) => {
+      state.user = null;
     }
   }
 });
 
-export const { increment, decrement, incrementByAmount } = userSlice.actions;
+export const { login, logout } = userSlice.actions;
 
-export const selectCount = (state) => state.user.user;
+export const selectUser = (state) => state.user.user;
 
 export default userSlice.reducer;
