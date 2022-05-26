@@ -15,7 +15,7 @@ const Login = () => {
         alt=""
       />
       <form>
-        <input type="text" />
+        <input type="text" placeholder="Full name (required if registering)" />
       </form>
     </LoginContainer>
   );
