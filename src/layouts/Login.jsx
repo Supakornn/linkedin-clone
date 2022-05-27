@@ -61,14 +61,26 @@ const Login = () => {
     if (!name) {
       return alert("Please enter your name");
     }
-    auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
-      userAuth.user
-        .updateProfile({
-          displayName: name,
-          photoURL: pic
-        })
-        .then(() => {});
-    });
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: name,
+            photoURL: pic
+          })
+          .then(() => {
+            dispatchEvent(
+              login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayname: name,
+                photoURL: pic
+              })
+            );
+          });
+      })
+      .catch((error) => alert(error.message));
   };
 
   return (
