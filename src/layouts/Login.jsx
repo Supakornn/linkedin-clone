@@ -3,11 +3,23 @@ import styled from "styled-components";
 
 // styled-components
 const LoginContainer = styled.div`
-  img {
-    width: 500px;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  > img {
+    object-fit: contain;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 `;
 const Login = () => {
+  const login = () => {};
+  const register = () => {};
   return (
     <LoginContainer>
       <img
@@ -16,7 +28,18 @@ const Login = () => {
       />
       <form>
         <input type="text" placeholder="Full name (required if registering)" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit" onClick={login}>
+          Sign In
+        </button>
       </form>
+      <p>
+        Not a member?
+        <span className="register" onClick={register}>
+          Register Now
+        </span>
+      </p>
     </LoginContainer>
   );
 };
