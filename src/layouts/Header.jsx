@@ -7,6 +7,7 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
+import { useDispatch } from "react-redux";
 
 // Styled Components
 const HeaderContainer = styled.div`
@@ -53,6 +54,9 @@ const HeaderRight = styled.div`
 `;
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const logout = () => {};
+
   return (
     <HeaderContainer>
       {/* Left Header */}

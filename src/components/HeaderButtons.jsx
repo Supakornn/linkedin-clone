@@ -27,9 +27,9 @@ const HeaderOption = styled.div`
   }
 `;
 
-const HeaderOptions = ({ avatar, title, Icon }) => {
+const HeaderOptions = ({ avatar, title, Icon, onClick }) => {
   return (
-    <HeaderOption>
+    <HeaderOption onClick={onClick}>
       {Icon && <Icon className="HeaderOption__icon" />}
       {avatar && <Avatar className="HeaderOption__icon" src={avatar} />}
       <h3 className="HeaderOption__title">{title}</h3>
