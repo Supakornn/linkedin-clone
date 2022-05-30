@@ -29,7 +29,7 @@ const LoginContainer = styled.div`
       font-size: 20px;
       padding-left: 10px;
       margin-bottom: 10px;
-      border-radius: 10px;
+      border-radius: 5px;
     }
     > button {
       width: 365px;
