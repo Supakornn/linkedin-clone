@@ -12,51 +12,51 @@ import { login, logout } from "./features/userSlice";
 
 // styled-components
 const AppContainer = styled.div`
-  background-color: #f3f2ef;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #f3f2ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const BodyContainer = styled.div`
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 `;
 
 function App() {
-  const user = useSelector(selectUser);
-  const dispatch = useDispatch();
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
 
-  useEffect(() => {
-    auth.onAuthStateChanged((userAuth) => {
-      if (userAuth) {
-        dispatch(
-          login({
-            email: userAuth.email,
-            uid: userAuth.uid,
-            name: userAuth.displayName,
-            photoUrl: userAuth.photoURL
-          })
-        );
-      } else {
-        dispatch(logout());
-      }
-    });
-  }, []);
+    useEffect(() => {
+        auth.onAuthStateChanged((userAuth) => {
+            if (userAuth) {
+                dispatch(
+                    login({
+                        email: userAuth.email,
+                        uid: userAuth.uid,
+                        name: userAuth.displayName,
+                        photoUrl: userAuth.photoURL
+                    })
+                );
+            } else {
+                dispatch(logout());
+            }
+        });
+    }, []);
 
-  return (
-    <AppContainer>
-      <Header />
-      {!user ? (
-        <Login />
-      ) : (
-        <BodyContainer>
-          <Sidebar />
-          <Feed />
-        </BodyContainer>
-      )}
-    </AppContainer>
-  );
+    return (
+        <AppContainer>
+            <Header />
+            {!user ? (
+                <Login />
+            ) : (
+                <BodyContainer>
+                    <Sidebar />
+                    <Feed />
+                </BodyContainer>
+            )}
+        </AppContainer>
+    );
 }
 
 export default App;
