@@ -9,60 +9,60 @@ import SendIcon from "@mui/icons-material/Send";
 
 // styled components
 const PostContainer = styled.div`
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 `;
 
 const PostHeader = styled.div`
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 `;
 
 const PostInfo = styled.div`
-    margin-left: 10px;
+  margin-left: 10px;
 
-    > p {
-        font-size: 12px;
-        color: gray;
-    }
+  > p {
+    font-size: 12px;
+    color: gray;
+  }
 
-    > h2 {
-        font-size: 15px;
-    }
+  > h2 {
+    font-size: 15px;
+  }
 `;
 
 const PostBody = styled.div`
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 `;
 
 const ButtonContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 `;
 
 const Post = ({ name, description, message, photoUrl }) => {
-    return (
-        <PostContainer>
-            <PostHeader>
-                <Avatar />
-                <PostInfo>
-                    <h2>{name}</h2>
-                    <p>{description}</p>
-                </PostInfo>
-            </PostHeader>
-            <PostBody>
-                <p>{message}</p>
-            </PostBody>
-            <ButtonContainer>
-                <BodyButtons Icon={ThumbUpOffAltIcon} title="Like" color="gray" />
-                <BodyButtons Icon={ChatIcon} title="Comment" color="gray" />
-                <BodyButtons Icon={ShareIcon} title="Share" color="gray" />
-                <BodyButtons Icon={SendIcon} title="Send" color="gray" />
-            </ButtonContainer>
-        </PostContainer>
-    );
+  return (
+    <PostContainer>
+      <PostHeader>
+        <Avatar />
+        <PostInfo>
+          <h2>{name}</h2>
+          <p>{description}</p>
+        </PostInfo>
+      </PostHeader>
+      <PostBody>
+        <p>{message}</p>
+      </PostBody>
+      <ButtonContainer>
+        <BodyButtons Icon={ThumbUpOffAltIcon} title="Like" color="gray" />
+        <BodyButtons Icon={ChatIcon} title="Comment" color="gray" />
+        <BodyButtons Icon={ShareIcon} title="Share" color="gray" />
+        <BodyButtons Icon={SendIcon} title="Send" color="gray" />
+      </ButtonContainer>
+    </PostContainer>
+  );
 };
 
 export default Post;
