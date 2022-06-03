@@ -34,7 +34,7 @@ function App() {
           login({
             email: userAuth.email,
             uid: userAuth.uid,
-            name: userAuth.displayName,
+            displayName: userAuth.displayName,
             photoUrl: userAuth.photoURL
           })
         );
@@ -42,7 +42,7 @@ function App() {
         dispatch(logout());
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <AppContainer>

@@ -8,7 +8,8 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
 import { useDispatch } from "react-redux";
-
+import { logout } from "../features/userSlice";
+import { auth } from "../firebase";
 // Styled Components
 const HeaderContainer = styled.div`
   position: sticky;
@@ -55,7 +56,11 @@ const HeaderRight = styled.div`
 
 const Header = () => {
   const dispatch = useDispatch();
-  const logout = () => {};
+
+  const logoutApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
 
   return (
     <HeaderContainer>
@@ -81,6 +86,7 @@ const Header = () => {
         <HeaderButtons
           avatar="https://i.pinimg.com/736x/47/88/7a/47887aad237a9bbdf081ae36ebe53778.jpg"
           title="me"
+          onClick={logoutApp}
         />
       </HeaderRight>
     </HeaderContainer>

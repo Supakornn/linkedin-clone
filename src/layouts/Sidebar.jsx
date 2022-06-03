@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 // styled-components
 const SidebarContainer = styled.div`
@@ -109,6 +111,7 @@ const SidebarRecntItems = styled.div`
 `;
 
 const Sidebar = () => {
+  const user = useSelector(selectUser);
   const recentItem = (topic) => (
     <SidebarRecntItems>
       <div className="sidebar__hash">#</div>
@@ -124,7 +127,7 @@ const Sidebar = () => {
           alt="banner"
         />
         <Avatar className="sidebar__avatar" />
-        <h2>Supakorn Ieamgomol</h2>
+        <h2>{user.displayName}</h2>
         <h4>supakorn0728@gmail.com</h4>
       </SidebarTop>
       <SidebarStats>
