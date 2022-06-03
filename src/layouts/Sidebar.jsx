@@ -128,7 +128,7 @@ const Sidebar = () => {
         />
         <Avatar className="sidebar__avatar" />
         <h2>{user.displayName}</h2>
-        <h4>supakorn0728@gmail.com</h4>
+        <h4>{user.email}</h4>
       </SidebarTop>
       <SidebarStats>
         <div className="sidebar__stat">
