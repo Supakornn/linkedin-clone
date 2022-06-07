@@ -15,12 +15,14 @@ const AppContainer = styled.div`
   background-color: #f3f2ef;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
 const BodyContainer = styled.div`
   display: flex;
-  width: 100%;
+  margin-top: 35px;
+  max-width: 1200px;
+  margin-left: 20px;
+  margin-right: 20px;
 `;
 
 function App() {
