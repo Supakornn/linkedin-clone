@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
 import BodyButtons from "../components/BodyButtons";
@@ -42,9 +42,9 @@ const ButtonContainer = styled.div`
   justify-content: space-evenly;
 `;
 
-const Post = ({ name, description, message, photoUrl }) => {
+const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
   return (
-    <PostContainer>
+    <PostContainer ref={ref}>
       <PostHeader>
         <Avatar src={photoUrl}>{name[0]}</Avatar>
         <PostInfo>
@@ -63,6 +63,6 @@ const Post = ({ name, description, message, photoUrl }) => {
       </ButtonContainer>
     </PostContainer>
   );
-};
+});
 
 export default Post;

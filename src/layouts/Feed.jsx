@@ -11,7 +11,7 @@ import { db } from "../firebase";
 import firebase from "firebase/compat/app";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-
+import FlipMove from "react-flip-move";
 const FeedContainer = styled.div`
   flex: 0.6;
   margin: 0 20px;
@@ -105,15 +105,17 @@ const Feed = () => {
           <BodyButtons Icon={CalendarViewDayIcon} title="Write article" color="#7FC15E" />
         </ButtonContainer>
       </InputContainer>
-      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-        <Post
-          key={id}
-          name={name}
-          description={description}
-          message={message}
-          photoUrl={photoUrl}
-        />
-      ))}
+      <FlipMove>
+        {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+          <Post
+            key={id}
+            name={name}
+            description={description}
+            message={message}
+            photoUrl={photoUrl}
+          />
+        ))}
+      </FlipMove>
     </FeedContainer>
   );
 };
