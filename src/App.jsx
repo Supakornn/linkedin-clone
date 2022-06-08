@@ -9,6 +9,7 @@ import Login from "./layouts/Login";
 import { auth } from "./firebase";
 import { useDispatch } from "react-redux";
 import { login, logout } from "./features/userSlice";
+import Widgets from "./layouts/Widgets";
 
 // styled-components
 const AppContainer = styled.div`
@@ -55,6 +56,7 @@ function App() {
         <BodyContainer>
           <Sidebar />
           <Feed />
+          <Widgets />
         </BodyContainer>
       )}
     </AppContainer>
