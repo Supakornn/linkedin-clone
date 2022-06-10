@@ -25,15 +25,15 @@ const WidgetsHeader = styled.div`
   }
 `;
 
-const Article = styled.div``;
+// const Article = styled.div``;
 
 const Widgets = () => {
-  const newArticle = (headeing, subtitle) => (
-    <Article>
-      <div className="left"></div>
-      <div className="right"></div>
-    </Article>
-  );
+  // const newArticle = (headeing, subtitle) => (
+  //   <Article>
+  //     <div className="left"></div>
+  //     <div className="right"></div>
+  //   </Article>
+  // );
   return (
     <WidgetsContainer>
       <WidgetsHeader>
