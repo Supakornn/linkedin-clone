@@ -34,6 +34,28 @@ const Article = styled.div`
   :hover {
     background-color: whitesmoke;
   }
+
+  .left {
+    color: #0177b7;
+    margin-right: 5px;
+
+    > .MuiSvgIcon-root {
+      font-size: 15px;
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    > h4 {
+      font-size: 14px;
+    }
+
+    > p {
+      font-size: 12px;
+      color: gray;
+    }
+  }
 `;
 
 const Widgets = () => {
@@ -44,8 +66,8 @@ const Widgets = () => {
       </div>
 
       <div className="right">
-        {headeing}
-        {subtitle}
+        <h4>{headeing}</h4>
+        <p>{subtitle}</p>
       </div>
     </Article>
   );
