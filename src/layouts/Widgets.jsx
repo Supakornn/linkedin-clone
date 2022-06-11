@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import InfoIcon from "@mui/icons-material/Info";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const WidgetsContainer = styled.div`
   position: sticky;
@@ -25,21 +26,41 @@ const WidgetsHeader = styled.div`
   }
 `;
 
-// const Article = styled.div``;
+const Article = styled.div`
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+
+  :hover {
+    background-color: whitesmoke;
+  }
+`;
 
 const Widgets = () => {
-  // const newArticle = (headeing, subtitle) => (
-  //   <Article>
-  //     <div className="left"></div>
-  //     <div className="right"></div>
-  //   </Article>
-  // );
+  const newArticle = (headeing, subtitle) => (
+    <Article>
+      <div className="left">
+        <FiberManualRecordIcon />
+      </div>
+
+      <div className="right">
+        {headeing}
+        {subtitle}
+      </div>
+    </Article>
+  );
   return (
     <WidgetsContainer>
       <WidgetsHeader>
         <h2>LinkedIn News</h2>
         <InfoIcon />
       </WidgetsHeader>
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
+      {newArticle("New Article", "Lorem ipsum dolor sit amet")}
     </WidgetsContainer>
   );
 };
